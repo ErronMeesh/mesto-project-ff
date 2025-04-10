@@ -25,14 +25,14 @@ const formAdd = document.querySelector(".popup__form[name='new-place']");
 const placeInput = formAdd.querySelector(".popup__input_type_card-name");
 const linkInput = formAdd.querySelector(".popup__input_type_url");
 
-// ======= Функции работы с карточками =======
-function handleCardClick(cardData) {
-  const popupImage = popupImg.querySelector(".popup__image");
-  const popupCaption = popupImg.querySelector(".popup__caption");
+const popupImage = popupImg.querySelector(".popup__image");
+const popupCaption = popupImg.querySelector(".popup__caption");
 
-  popupImage.src = cardData.link;
-  popupImage.alt = cardData.name;
-  popupCaption.textContent = cardData.name;
+// ======= Функции работы с карточками =======
+function handleCardClick(name, link) {
+  popupImage.src = link;
+  popupImage.alt = name;
+  popupCaption.textContent = name;
 
   openModal(popupImg);
 }

@@ -10,7 +10,7 @@ export function createCard(cardData, deleteCard, handleCardClick, handleLikeClic
   cardTitle.textContent = cardData.name;
 
   deleteButton.addEventListener("click", () => deleteCard(cardElement));
-  cardImage.addEventListener("click", () => handleCardClick(cardData));
+  cardImage.addEventListener("click", () => handleCardClick(cardData.name, cardData.link));
   likeButton.addEventListener("click", () => handleLikeClick(likeButton));
 
   return cardElement;

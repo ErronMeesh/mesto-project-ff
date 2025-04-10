@@ -1,9 +1,9 @@
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
-module.exports = {
+module.exports = ({ env }) => ({
   plugins: [
     autoprefixer,
-    cssnano({ preset: 'default' })
-  ]
-};
+    env === 'production' ? cssnano({ preset: 'default' }) : null,
+  ].filter(Boolean),
+});
