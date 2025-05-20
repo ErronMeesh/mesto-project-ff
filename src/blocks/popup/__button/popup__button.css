@@ -25,3 +25,9 @@
     line-height: 17px;
   }
 }
+
+.popup__button_disabled {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #C4C4C4;
+  cursor: default;
+}
