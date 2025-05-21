@@ -18,11 +18,21 @@
   border-bottom: 1px solid #FF0000;
 }
 
-.popup__error_visible {
-  color: #FF0000;
+.popup__error {
+  position: relative;
+  display: block;
+  min-height: 30px; 
   font-size: 12px;
   line-height: 15px;
-  display: block;
+  color: #FF0000;
+  opacity: 0;
+  transition: opacity 0.3s;
+  margin-bottom: -18px;
+  z-index: 1;
+}
+
+.popup__error_visible {
+  opacity: 1; 
 }
 @media screen and (max-width: 568px) {
   .popup__title {
